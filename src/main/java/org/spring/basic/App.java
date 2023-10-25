@@ -13,6 +13,6 @@ public class App
     {
         ApplicationContext ctx = new  AnnotationConfigApplicationContext("org.spring.basic");
         Dog dog = ctx.getBean(Dog.class);
-        System.out.println(dog.toString());
+        System.out.println(dog);
     }
 }

@@ -17,4 +17,13 @@ public class Animal {
         return p;
     }
 
+    @Bean
+    public Person lifeiyu() {
+        Person p = new Person();
+        p.setName("lifeiyu");
+        p.setSex("男");
+        p.setAge(23);
+        return p;
+    }
+
 }

@@ -1,12 +1,14 @@
 package org.spring.basic;
 
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component(value = "wangmu")
+@Component(value = "xumu")
+//@Primary
 public class Person {
 
-    private String name = "wangmu";
+    private String name = "xumu";
 
     private Integer age = 18;
 
