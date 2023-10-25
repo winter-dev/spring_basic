@@ -5,14 +5,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 /**
  * Hello world!
- *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        ApplicationContext ctx = new  AnnotationConfigApplicationContext("org.spring.basic");
+public class App {
+    public static void main(String[] args) {
+        ApplicationContext ctx = new AnnotationConfigApplicationContext("org.spring.basic");
         Dog dog = ctx.getBean(Dog.class);
-        System.out.println(dog);
+        System.out.println(dog.toString());
     }
 }

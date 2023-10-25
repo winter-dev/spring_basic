@@ -1,12 +1,10 @@
 package org.spring.basic;
 
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-
-import javax.annotation.Resource;
-import java.util.List;
 
 
 @Component
@@ -17,9 +15,9 @@ public class Dog {
 
     private String weight;
 
-    @Resource(name = "xulaozu")
-    private Person person;
-
+    @Autowired
+    @Qualifier(value = "lifeiyu")
+    private ObjectProvider<Person> person;
 
 
     @Override
@@ -27,7 +25,7 @@ public class Dog {
         return "Dog{" +
                 "name='" + name + '\'' +
                 ", weight='" + weight + '\'' +
-                ", person=" + person +
+                ", person=" + person.getIfAvailable(Person::new) +
                 '}';
     }
 }
