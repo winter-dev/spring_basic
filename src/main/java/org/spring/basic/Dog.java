@@ -1,6 +1,5 @@
 package org.spring.basic;
 
-import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,7 +16,7 @@ public class Dog {
 
     @Autowired
     @Qualifier(value = "lifeiyu")
-    private ObjectProvider<Person> person;
+    private Person person;
 
 
     @Override
@@ -25,7 +24,7 @@ public class Dog {
         return "Dog{" +
                 "name='" + name + '\'' +
                 ", weight='" + weight + '\'' +
-                ", person=" + person.getIfAvailable(Person::new) +
+                ", person=" + person +
                 '}';
     }
 }

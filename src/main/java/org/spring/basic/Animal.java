@@ -17,7 +17,8 @@ public class Animal {
         return p;
     }
 
-    @Bean
+
+    @Bean(initMethod = "init", destroyMethod = "destroy")
     public Person lifeiyu() {
         Person p = new Person();
         p.setName("lifeiyu");

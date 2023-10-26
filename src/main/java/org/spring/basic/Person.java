@@ -1,7 +1,6 @@
 package org.spring.basic;
 
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component(value = "xumu")
@@ -13,6 +12,14 @@ public class Person {
     private Integer age = 18;
 
     private String sex = "男";
+
+    public void init() {
+        System.out.println(name + "被初始化了。。。");
+    }
+
+    public void destroy() {
+        System.out.println(name + "被销毁了。。。");
+    }
 
     public void setName(String name) {
         this.name = name;
