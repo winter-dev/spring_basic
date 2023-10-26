@@ -12,12 +12,6 @@ public class BeanConfiguration {
     }
 
     @Bean
-    public Ball ball() {
-        return new Ball("ball");
-    }
-
-
-    @Bean
     public ToyFactoryBean toyFactory() {
         ToyFactoryBean bean = new ToyFactoryBean();
         bean.setChild(child());
