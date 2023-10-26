@@ -5,4 +5,8 @@ public class Ball extends Toy {
     public Ball(String name) {
         super(name);
     }
+
+    public Ball() {
+        super("ball");
+    }
 }

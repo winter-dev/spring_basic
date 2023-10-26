@@ -6,6 +6,8 @@
 
     <bean id="child" class="org.spring.factory.Child"/>
 
+    <bean id="bean" class="org.spring.factory.Ball"></bean>
+
     <bean id="toyFactory" class="org.spring.factory.ToyFactoryBean">
         <property name="child" ref="child"/>
     </bean>
