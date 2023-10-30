@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Profile;
  * @apiNote teacher config
  */
 @Configuration
-@Profile("province")
+@Profile("city")
 public class TeacherConfiguration {
 
     @Bean
@@ -19,7 +19,7 @@ public class TeacherConfiguration {
     }
 
     @Bean
-    public Teacher teacherWang(){
+    public Teacher teacherWong(){
         return new Teacher("王老师");
     }
 }
