@@ -11,6 +11,6 @@ import java.lang.annotation.*;
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-@Import({Boss.class,TeacherConfiguration.class,ReceptionImportSelector.class})
+@Import({Boss.class,BossCondition.class,TeacherConfiguration.class,ReceptionImportSelector.class})
 public @interface EnableModule {
 }

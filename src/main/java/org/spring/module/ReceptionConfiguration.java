@@ -1,7 +1,6 @@
 package org.spring.module;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -13,8 +12,8 @@ import org.springframework.context.annotation.Configuration;
 public class ReceptionConfiguration {
 
     @Bean
-    @Conditional(BossCondition.class)
-    public Reception conditionReception() {
+    @ConditionalOnBean(beanNames = "boss")
+    public Reception reception1() {
         return new Reception();
     }
 }

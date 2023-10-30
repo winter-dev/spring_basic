@@ -1,13 +1,13 @@
 package org.spring.module;
 
-import org.springframework.context.annotation.Condition;
-import org.springframework.context.annotation.ConditionContext;
-import org.springframework.core.type.AnnotatedTypeMetadata;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-public class BossCondition implements Condition {
+@Configuration
+public class BossCondition {
 
-    @Override
-    public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
-        return context.getBeanFactory().containsBeanDefinition(Boss.class.getName());
+    @Bean
+    public Boss boss() {
+        return new Boss();
     }
 }

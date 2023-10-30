@@ -3,7 +3,6 @@ package org.spring.module;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.scheduling.annotation.EnableAsync;
 
-import java.util.Arrays;
 import java.util.stream.Stream;
 
 /**
@@ -15,10 +14,7 @@ public class ModuleApp {
 
     public static void main(String[] args) {
         AnnotationConfigApplicationContext app =
-                new AnnotationConfigApplicationContext();
-        app.getEnvironment().setActiveProfiles("city");
-        app.register(ModuleConfiguration.class);
-        app.refresh();
+                new AnnotationConfigApplicationContext(ModuleConfiguration.class);
         Stream.of(app.getBeanDefinitionNames()).forEach(System.out::println);
     }
 }

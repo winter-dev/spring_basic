@@ -10,16 +10,17 @@ import org.springframework.context.annotation.Profile;
  * @apiNote teacher config
  */
 @Configuration
-@Profile("city")
 public class TeacherConfiguration {
 
     @Bean
-    public Teacher teacherZhang(){
+    @ConditionalOnBean(beanNames = "boss")
+    public Teacher teacherZhang() {
         return new Teacher("张老师");
     }
 
     @Bean
-    public Teacher teacherWong(){
+    @ConditionalOnBean(Boss.class)
+    public Teacher teacherWong() {
         return new Teacher("王老师");
     }
 }
