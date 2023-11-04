@@ -9,7 +9,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class App {
     public static void main(String[] args) {
         ApplicationContext ctx = new AnnotationConfigApplicationContext("org.spring.basic");
-        Dog dog = ctx.getBean(Dog.class);
-        System.out.println(dog);
+        AwareImpl2 impl2 = ctx.getBean(AwareImpl2.class);
+        impl2.printBeanNames();
     }
 }

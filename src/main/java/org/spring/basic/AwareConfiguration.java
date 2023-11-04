@@ -9,9 +9,13 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class AwareConfiguration {
-
     @Bean
     public AwareImpl impl() {
         return new AwareImpl();
+    }
+
+    @Bean
+    public AwareImpl2 impl2() {
+        return new AwareImpl2();
     }
 }

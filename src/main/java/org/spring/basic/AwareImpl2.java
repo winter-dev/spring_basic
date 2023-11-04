@@ -13,7 +13,7 @@ import java.util.stream.Stream;
  * @date 2023/10/25 16:29
  * @apiNote Aware impl
  */
-public class AwareImpl implements ApplicationContextAware, BeanNameAware, NamedBean {
+public class AwareImpl2 implements ApplicationContextAware, BeanNameAware, NamedBean {
 
     private ApplicationContext ctx;
 
@@ -21,7 +21,7 @@ public class AwareImpl implements ApplicationContextAware, BeanNameAware, NamedB
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println("AwareImpl Had Aware");
+        System.out.println("AwareImpl2 Had Aware");
         this.ctx = applicationContext;
     }
 
