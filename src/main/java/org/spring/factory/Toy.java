@@ -2,7 +2,7 @@ package org.spring.factory;
 
 public abstract class Toy {
 
-    private String name;
+    private final String name;
 
     public Toy(String name) {
         System.out.println("生产了一个" + name);
