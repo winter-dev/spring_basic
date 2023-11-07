@@ -11,9 +11,18 @@ public class AnimalBeanPostProcessor implements BeanPostProcessor {
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         System.out.println("拦截到Bean的初始化之前：" + beanName);
         if (bean instanceof Dog) {
-            //can not take effect
-            return BeanPostProcessor.super.postProcessBeforeInitialization(new Pig("huahua"), "huahua");
+            Dog dog = (Dog) bean;
+            dog.setName("huahua");
         }
         return BeanPostProcessor.super.postProcessBeforeInitialization(bean, beanName);
+    }
+
+    @Override
+    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+        if (bean instanceof Dog) {
+            Dog dog = (Dog) bean;
+            System.out.println("###name:"+dog.getName());
+        }
+        return bean;
     }
 }

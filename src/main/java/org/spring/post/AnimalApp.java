@@ -8,7 +8,8 @@ public class AnimalApp {
 
     public static void main(String[] args) {
         AnnotationConfigApplicationContext app = new AnnotationConfigApplicationContext(AnimalConfiguration.class);
-        Arrays.stream(app.getBeanDefinitionNames()).forEach(System.out::println);
-        System.out.println(app.getBean(Pig.class));
+//        Arrays.stream(app.getBeanDefinitionNames()).forEach(System.out::println);
+        System.out.println(app.getBean(Dog.class));
+        app.close();
     }
 }
