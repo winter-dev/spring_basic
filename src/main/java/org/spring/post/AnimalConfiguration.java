@@ -4,10 +4,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
-@ComponentScan(value = "org.spring.post")
+//@Configuration
+//@ComponentScan(value = "org.spring.post")
 public class AnimalConfiguration {
-
+/*
     @Bean
     public Dog jim() {
         return new Dog("jim");
@@ -18,4 +18,5 @@ public class AnimalConfiguration {
         return new Pig("peppa");
     }
 
+ */
 }
