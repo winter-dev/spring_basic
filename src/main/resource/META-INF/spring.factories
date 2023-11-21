@@ -1,3 +1,7 @@
 org.spring.spi.FeverDao=\
   org.spring.spi.MysqlFeverDao,\
   org.spring.spi.OracleFeverDao
+org.spring.advance.EnableJdbc=\
+  org.spring.advance.MysqlJdbcConfiguration,\
+  org.spring.advance.H2JdbcConfiguration,\
+  org.spring.advance.OracleJdbcConfiguration
