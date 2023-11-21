@@ -1,0 +1,3 @@
+org.spring.spi.FeverDao=\
+  org.spring.spi.MysqlFeverDao,\
+  org.spring.spi.OracleFeverDao
